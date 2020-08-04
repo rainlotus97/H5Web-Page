@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: #666;
+}
+input{
+    outline: none;
+}
+.MiLogin {
+    width: 100%;
+    /* height: 850px; */
+    position: relative;
+}
+
+.topShop {
+    width: 90%;
+    margin: 0 auto;
+    height: 98px;
+}
+
+.contianPhone {
+    width: 100%;
+    height: 588px;
+    background: url("https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aece569d6689b4c461bb53efd9eea9c7.jpg") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 98px;
+    background-position: top center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav_tabs{
+    width: 410px;
+    height: 35.6px;
+    text-align: center;
+    padding: 27px 0 24px;
+    line-height: 35.6px;
+    margin-left: auto;
+    margin-right: 55px;
+    background-color: white;
+    margin-top: 30px;
+    cursor: default;
+}
+.logspan{
+    font-size: 24px;
+    color: #f56600;
+    cursor: pointer;
+}
+.twospan{
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}
+.twospan:hover{
+    color: #f56600;
+}
+.line{
+    font-size: 24px;
+    color: #dad8d8;
+    margin: 0 40px;
+
+}
+.loginarea,.loginarea2{
+    width: 410px;
+    height: 471.4px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: 55px;
+    position: relative;
+    cursor: default;
+}
+.loginarea2{
+    display: none;
+    position: relative;
+}
+.loginarea2::before{
+    content: "";
+    display: table;
+}
+.twoDcode,.twoDcode img{
+width: 180px;
+height: 180px;
+}
+.twoDcode{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.textShow{
+    width: 100%;
+    font-size: 14px;
+    position: absolute;
+    top: 75%;
+    text-align: center;
+}
+#custom-txt-name{
+    font-size: 14px;
+}
+#custom-txt-name span{
+    color: #f56600;
+}
+.input{
+    width: 306px;
+    height: 22px;
+    line-height: 22px;
+    padding: 13px 16px 13px 14px;
+    display: block;
+    margin: 0 auto;
+}
+.pwdinput{
+    margin-top: 15px;
+}
+.logindiv{
+    width: 340px;
+    height: 50px;
+    margin: 20px auto 0;
+    border: none;
+}
+.loginBtn{
+    width: 100%;
+    height: 50px;
+    background-color: #ff6700;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.loginarea>a{
+    display: block;
+    width: 340px;
+    color: #ff6700;
+    border: none;
+    line-height: normal;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.pwdForget{
+    width: 340px;
+    text-align: center;
+    margin-top: 30px;
+    margin: 30px auto 0;
+  
+}
+.pwdForget span{
+    color: #999;
+    font-size: 14px;
+}
+.pwdForget span:hover{
+    color: #ff6700;
+}
+.pwdLine{
+    margin: 0 5px;
+}
+.oth_type_tit{
+    border-top: 1px solid #e0e0e0;
+    color: #757575;
+    font-size: 14px;
+    cursor: text;
+}
+fieldset{
+    width: 340px;
+    border: 0;
+    margin: 120px auto 0;
+    cursor: text;
+}
+.loginType{
+    width: 340px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+.typeA{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    background: #0288d1;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.typeA i{
+    width:18px;
+    height: 19px;
+    background: url("../img/icons_type.png") no-repeat;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.typeA .qq{
+    background-position-x: -19px;
+}
+.typeA .weibo{
+    background-position-x: -38px;
+}
+.typeA .pay{
+    width:25px;
+    background-position-x:-57px;
+}
+.typeA .weixin{
+    width:24px;
+    background-position-x: -83px;
+}
+.typeA:nth-child(2){
+    background-color: #d32f2f;
+}
+.typeA:nth-child(3){
+    background-color: #0ae;
+}
+.typeA:last-child{
+    background-color: #00d20d;
+}
+.foot_display{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 766px;
+}
+.footUl{
+    width: 100%;
+    height: 18.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.footUl li{
+    color: #757575;
+}
+.footUla{
+    display: inline-block;
+    width: 48px;
+    height: 100%;
+    color: #757575;
+    text-align: center;
+    font-size: 14px;
+}
+.ulactive{
+    color: #333;
+}
+.footUla:nth-child(3){
+    width: 69.56px;
+}
+.footUla:nth-child(4){
+    width: 79.64px;
+}
+.footUla:last-child{
+    width: 76px;
+}
+.fd-intro{
+    padding: 10px;
+    text-align: center;
+    color: #757575;
+    font-size: 14px;
+}
+.beian-record-link{
+    color: #757575;
+}

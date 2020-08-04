@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/mobliefit.js"></script>
+    <style>
+        body{
+            background-color: #402c1b;
+        }
+        .box{
+            width: 10rem;
+            height: 1rem;
+            /* background-color: aquamarine; */
+        }
+        .left{
+            margin-left: 0.2rem;
+            float: left;
+            width: 5.8537rem;
+            height: 1rem;
+            /* background-color: bisque; */
+        }
+        .left>span{
+            font-size: 0.4rem;
+            line-height: 1.5rem;
+            padding-left: 0.2rem;
+        }
+        .left>span:nth-of-type(2){
+            color: #ccc;
+        }
+        .box2{
+            margin-top: 0.4rem;
+            margin-left: 0.4rem;
+            /* border: 1px solid red; */
+        }
+        .box2>.img{
+            float: left;
+        }
+        .box2>.img>img{
+            width: 3rem;
+            height: 4rem;
+        }
+        .box2>.texts{
+            width: 6rem;
+            height: 4rem;
+            /* border: 1px solid red; */
+            float: left;
+            margin-left: 0.2rem;
+        }
+        .box2>.texts>h1{
+            color: #fff;
+            /* font-size: larger; */
+        }
+        .box2>.texts>p{
+            color: rgb(168, 168, 168);
+            line-height: 0.6rem;
+            /* font-size: larger; */ 
+        }
+        .box2>.texts>.look{
+            width: 2.8rem;
+            height: 0.8rem;
+            margin-top: 0.2rem;
+            background-color: rgb(156, 156, 156);
+            float: left;
+            text-align: center;
+            line-height: 0.8rem;
+            border-radius: 0.1rem;
+        }
+        .box2>.texts>.look:nth-of-type(2){
+            margin-left: 0.3rem;
+        }
+        .box2>.texts>.look>span{
+            color: #fff;
+        }
+
+        .box3{
+            margin: 0.4rem 0.5rem;
+            width: 9rem;
+            height: 3rem;
+            display: flex;
+        }
+        .box3>div>img{
+            width: 0.5rem;
+            height: 0.5rem;
+            margin: 0.2rem;
+            display: block;
+            float: left;
+        }
+        .box3>div:nth-of-type(1) span{
+            font-size: 0.4rem;
+            width: 2rem;
+            height: 0.8rem;
+            line-height: 0.9rem;
+            display: block;
+            float: left;
+            color: #fff;
+        }
+        .box3>div:nth-of-type(2){
+            text-align: center;
+        }
+        .box3>div:nth-of-type(2) span{
+            font-size: 0.7rem;
+            color: #fff;
+        }
+        .box3>div:nth-of-type(2)>.orgcolor{
+            color: #ffffff;
+            font-size: 0.3341rem;
+        }
+        .txtIntro{
+            margin: 0.4rem 0.5rem;
+            width: 9rem;
+            height: 2rem;
+            /* background-color: red; */
+        }
+        .txtIntro>p{
+            color: #fff;
+            font-size: 0.4rem;
+        }
+        .txtIntro2{
+            margin: 0.4rem 0.5rem;
+            width: 9rem;
+            height: 12rem;
+            /* background-color: red; */
+        }
+        .txtIntro2>div{
+            margin-bottom: 0.3rem;
+        }
+        .txtIntro2 span{
+            font-size: 0.4rem;
+            color: #fff;
+        }
+        .txtIntro2>p{
+            font-size: 0.4rem;
+            color: #fff;
+        }
+        .lookimg{
+            width: 0.311rem;
+            height: 0.311rem;
+            margin: 0 0.1317rem 0 0;
+            vertical-align: middle;
+        }
+        .box3span{
+            margin-left: 3.2929rem;
+            text-align: right;
+        }
+        #box3span2{
+            display: block;
+            width: 0.5049rem;
+            height: 0.7263rem;
+            color: #ffb400;
+            margin-left: 0.1341rem;
+        }
+        .row{
+            height:  0.7263rem;
+        }
+        .title{
+            margin-top: 0.122rem;
+            position: relative;
+        }
+        .rightspan{
+            display: inline-block;
+            position: absolute;
+            right: 0;
+        }
+        .ulimg{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .ulimg li>img{
+            width: 1.7805rem;
+            height: 2.4927rem;
+        }
+        .name,.role{
+            color: #ffffff;
+            font-size: 0.2671rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box row">
+        <div class="left">
+            
+            <span><a href="">猫眼电影</a></span>
+            <span>></span>
+            <span><a href="">釜山行2：半岛</a></span>
+
+        </div>
+    </div>
+
+    <div class="box2 row">
+        <div class="img">
+            <img src="https://p0.meituan.net/movie/3a2709ccdccf60733ca335f512952a11208033.jpg@300w_414h" alt="">
+        </div>
+        <div class="texts">
+            <h1>釜山行2：半岛</h1>
+            <p>부산행2-반도</p>
+            <p>动作 / 惊悚 CGS中国巨幕</p>
+            <p>姜栋元 / 李贞贤 / 权海孝</p>
+            <p>2020-07-15韩国上映 / 115分钟</p>
+
+            <div class="look"><img class="lookimg" src="https://s0.meituan.net/bs/myfe/canary/file/asgard/images/movie/want-to-watch.png" alt=""><span>想看</span></div>
+            <div class="look"><img class="lookimg" src="https://s0.meituan.net/bs/myfe/canary/file/asgard/images/movie/want-to-watch.png" alt=""><span>看过</span></div>
+        </div>
+    </div>
+
+    <div class="box3 row">
+        <div class="row rowss">
+            <img src="https://s0.meituan.net/bs/myfe/canary/file/asgard/images/movie/logo.png" alt="">
+            <span>实时口碑</span>
+            <span class="box3span">356人看过</span>
+            <span id="box3span2">6.6</span>
+        </div>
+        <!-- <div><span orgcolor>入围第73届戛纳国际电影节官方单元</span></div> -->
+        <!-- <div><span class="orgcolor">100000</span><span>人想看</span></div> -->
+    </div>
+
+    <div class="txtIntro">
+        <p>根据国家相关规定，《釜山行2：半岛》时长超过110分钟，播放中途会暂停进行影厅内消毒及换气工作，敬请谅解！</p>
+    </div>
+    <div class="txtIntro2">
+        <div>
+            <div><span>简介</span></div>
+        </div>
+        <p>导演延尚昊已确认，[半岛]不是[釜山行]的续集，新片不是之前故事的延续，但它发生在同一个宇宙。[半岛]讲述灾难发生的4年后，朝鲜半岛满目疮痍，逃到海外的前士兵Jung-seok奉命回国，意外地遇到了幸存者。该片目前在后期制作，今夏韩国上映。
+        </p>
+        <div class="title">
+            <span>演职人员</span>
+            <span class="rightspan">全部 &gt;</span>
+        </div>
+        <ul class="ulimg">
+            <li>
+                <img src="https://p1.meituan.net/movie/28c77d2e0ad8bb51cd44d96392dfe4a585972.jpg@160w_224h_1e_1c" alt="">
+                <p class="name">延尚昊</p>
+                <p class="role">导演</p>
+            </li>
+            <li>
+                <img src="https://p1.meituan.net/movie/b3b929666b85384c2c97abe7fcea304f34784.jpg@160w_224h_1e_1c" alt="">
+                <p class="name">姜栋元</p>
+                <p class="role">饰 俊硕</p>
+            </li>
+            <li>
+                <img src="https://p1.meituan.net/movie/5c1fc67238bc650894b9622fb2149b0948192.jpg@160w_224h_1e_1c" alt="">
+                <p class="name">李贞贤</p>
+                <p class="role">饰 敏贞</p>
+            </li>
+            <li>
+                <img src="https://p0.meituan.net/movie/faa5888c2a79e032b094e2ad32bc645934502.jpg@160w_224h_1e_1c" alt="">
+                <p class="name">权海孝</p>
+                <p class="role">饰 --</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

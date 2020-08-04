@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/fonts/fontawesome-webfont.eot">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            border: none;
+        }
+
+        .meituan {
+            width: 10rem;
+            height: 21.8537rem;
+            margin: 0 auto;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 1.3463rem;
+            background-image: linear-gradient(135deg, #FFD000 0%, #FFBD00 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .nav-city {
+            width: 1.5171rem;
+            height: 0.4952rem;
+            font-size: 0.3732rem;
+            display: block;
+            text-align: center;
+            margin-right: 0.122rem;
+        }
+
+        .icn_down {
+            width: 0.267rem;
+            height: 0.14rem;
+            vertical-align: middle;
+            border: none;
+            /* padding-right: 0.4195rem; */
+        }
+
+        .searchBox {
+            width: 6.6878rem;
+            height: 0.8533rem;
+            background-color: white;
+            border-radius: 0.1829rem;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icn_mine {
+            width: 0.64rem;
+            height: 0.64rem;
+            vertical-align: middle;
+            border: none;
+            margin-left: 0.3659rem;
+        }
+
+        .icn_search {
+            width: 20%;
+            height: 100%;
+            border: none;
+        }
+
+        #nav-input {
+            width: 80%;
+            height: 100%;
+            border: none;
+            font-size: 0.3733rem;
+        }
+
+        .icn_searchbox {
+            width: 20%;
+            height: 100%;
+            position: relative;
+        }
+
+        .icn_search {
+            width: 0.4834rem;
+            height: 0.4659rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tag {
+            width: 100%;
+            height: 4.32rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tagli {
+            width: 19%;
+            height: 100%;
+            margin: 0 0.122rem;
+        }
+
+        .row::before {
+            content: "";
+            display: table;
+        }
+
+        .litop,
+        .libot {
+            height: 40%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .divli {
+            width: 1.0671rem;
+            height: 1.0671rem;
+            border-radius: 50%;
+            background-color: #fd9d21;
+            text-align: center;
+            line-height: 1rem;
+            margin: 0.3658rem auto 0.061rem;
+        }
+
+        .litop i,
+        .libot i {
+            color: white;
+        }
+
+        .tagli:nth-child(1) .libot .divli {
+            background-color: #fed030;
+        }
+
+        .tagli:nth-child(2) .litop .divli {
+            background-color: #ff6767;
+        }
+
+        .tagli:nth-child(2) .libot .divli {
+            background-color: #4dc6ee;
+        }
+
+        .tagli:nth-child(3) .litop .divli {
+            background-color: #8a90fa;
+        }
+
+        .tagli:nth-child(3) .libot .divli {
+            background-color: #ff80c2;
+        }
+
+        .tagli:nth-child(4) .litop .divli {
+            background-color: #fed030;
+        }
+
+        .tagli:nth-child(4) .libot .divli {
+            background-color: #fd9d21;
+        }
+
+        .tagli:nth-child(5) .litop .divli {
+            background-color: #fd9d21;
+        }
+
+        .tagli:nth-child(5) .libot .divli {
+            background-color: #00d3be;
+        }
+
+        .gray {
+            width: 100%;
+            height: 0.2439rem;
+            background-color: rgb(221, 219, 219);
+        }
+
+        .delicacy {
+            width: 100%;
+            height: 12.1951rem;
+
+        }
+
+        .foodfav {
+            width: 95%;
+            margin-left: auto;
+            height: 1.1066rem;
+            border-bottom: 1px solid #333333;
+            line-height: 1.1066rem;
+        }
+
+        .foodfav span {
+            font-size: 0.4537rem;
+        }
+
+        .foodlist {
+            width: 95%;
+            margin-left: auto;
+        }
+
+        .foli {
+            width: 100%;
+            height: 2.72rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 0.0122rem solid #333333;
+            /* margin-bottom: 0.122rem; */
+        }
+
+        .fooimg {
+            width: 30%;
+            height: 80%;
+        }
+        .foliright{
+            width: 66%;
+            height: 80%;
+            margin-left: auto;
+        }
+        .foli1{
+            width: 100%;
+            height: 20%;
+            font-size: 0.4rem;
+        }
+        .foli2{
+            width: 100%;
+            height: 60%;
+            font-size: 0.32rem;
+        }
+        .foli3{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            line-height: 0.6163rem;
+        }
+        .foli3 .strong{
+            font-size: 0.38rem;
+            color: #ff6600;
+        }
+        .foli3 .strong-color{
+            font-size: 0.32rem;
+            color: #ff6600;
+        }
+        .sell{
+            display: block;
+            font-size: 0.32rem;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="meituan">
+        <header class="navbar">
+            <a class="nav-city">
+                <span>无锡</span>
+                <img src="https://p0.meituan.net/travelcube/45c79a92755b54adc9dc1c4682b123b3201.png" class="icn_down">
+            </a>
+            <div class="searchBox">
+                <label for="nav-input" class="icn_searchbox">
+                    <img src="https://p0.meituan.net/travelcube/99c29829cf1b85d5cdbc76a1bd0b7329814.png"
+                        class="icn_search">
+                </label>
+                <input type="text" name="" id="nav-input" placeholder="请输入商家名、品类或者商圈...">
+            </div>
+            <img src="https://p0.meituan.net/travelcube/641521461179df7cfb88738dd1ea11ec1031.png" class="icn_mine">
+        </header>
+        <ul class="tag">
+            <li class="tagli row">
+                <div class="litop">
+                    <div class="divli">
+                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">美食</p>
+                </div>
+
+                <div class="libot">
+                    <div class="divli">
+                        <i class="fa fa-life-ring" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">KTV</p>
+                </div>
+            </li>
+
+            <li class="tagli row">
+                <div class="litop">
+                    <div class="divli">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">猫眼电影</p>
+                </div>
+                <div class="libot">
+                    <div class="divli">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">周边游</p>
+                </div>
+            </li>
+
+            <li class="tagli row">
+                <div class="litop">
+                    <div class="divli">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">酒店</p>
+                </div>
+                <div class="libot">
+                    <div class="divli">
+                        <i class="fa fa-bed" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">丽人</p>
+                </div>
+            </li>
+
+            <li class="tagli row">
+                <div class="litop">
+                    <div class="divli">
+                        <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">休闲娱乐</p>
+                </div>
+                <div class="libot">
+                    <div class="divli">
+                        <i class="fa fa-viacoin" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">小吃快餐</p>
+                </div>
+            </li>
+
+            <li class="tagli row">
+                <div class="litop">
+                    <div class="divli">
+                        <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">外卖</p>
+                </div>
+                <div class="libot">
+                    <div class="divli">
+                        <i class="fa fa-gg" aria-hidden="true"></i>
+                    </div>
+                    <p class="pchange">全部分类</p>
+                </div>
+            </li>
+
+        </ul>
+        <div class="gray"></div>
+        <div class="delicacy">
+            <div class="foodfav">
+                <span>猜你喜欢</span>
+            </div>
+            <ul class="foodlist">
+                <li class="foli">
+                    <img src="./img/2020_07_25_00_50_IMG_0033.JPG" class="fooimg"">     
+                    <div class=" foliright">
+                        <div class="foli1">夏威夷汗蒸漫温泉</div>
+                        <div class="foli2">
+                            [1912酒吧街]单人浴资套餐（周末节假不可用）
+                        </div>
+                        <div class="foli3">
+                            <span class="strong">58</span>
+                            <span class="strong-color">元</span>
+                            <span class="little">门市价:98元</span>
+                            <span class="sell">已售66829</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="foli">
+                    <img src="./img/2020_07_26_01_02_IMG_0037.PNG" class="fooimg"">     
+                    <div class=" foliright">
+                        <div class="foli1">陕锡灶汉中面皮</div>
+                        <div class="foli2">
+                            [1912酒吧街]单人浴资套餐（周末节假不可用）
+                        </div>
+                        <div class="foli3">
+                            <span class="strong">34</span>
+                            <span class="strong-color">元</span>
+                            <span class="little">门市价:98元</span>
+                            <span class="sell">已售66829</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="foli">
+                    <img src="./img/2020_07_26_04_29_IMG_0038.JPG" class="fooimg"">     
+                    <div class=" foliright">
+                        <div class="foli1">阿姨奶茶</div>
+                        <div class="foli2">
+                            [1912酒吧街]单人浴资套餐（周末节假不可用）
+                        </div>
+                        <div class="foli3">
+                            <span class="strong">29</span>
+                            <span class="strong-color">元</span>
+                            <span class="little">门市价:98元</span>
+                            <span class="sell">已售66829</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="foli">
+                    <img src="./img/2020_07_26_04_30_IMG_0039.JPG" class="fooimg"">     
+                    <div class=" foliright">
+                        <div class="foli1">豪味家牛排</div>
+                        <div class="foli2">
+                            [1912酒吧街]单人浴资套餐（周末节假不可用）
+                        </div>
+                        <div class="foli3">
+                            <span class="strong">148</span>
+                            <span class="strong-color">元</span>
+                            <span class="little">门市价:98元</span>
+                            <span class="sell">已售66829</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="foli">
+                    <img src="./img/2020_07_26_04_37_IMG_0040.JPG" class="fooimg"">     
+                    <div class=" foliright">
+                        <div class="foli1">夏威夷汗蒸漫温泉</div>
+                        <div class="foli2">
+                            [1912酒吧街]单人浴资套餐（周末节假不可用）
+                        </div>
+                        <div class="foli3">
+                            <span class="strong">258</span>
+                            <span class="strong-color">元</span>
+                            <span class="little">门市价:408元</span>
+                            <span class="sell">已售54829</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="foli">
+                    <img src="./img/butterfly.jpg" class="fooimg"">     
+                    <div class=" foliright">
+                        <div class="foli1">大阪名物八八家</div>
+                        <div class="foli2">
+                            [1912酒吧街]单人浴资套餐（周末节假不可用）
+                        </div>
+                        <div class="foli3">
+                            <span class="strong">528</span>
+                            <span class="strong-color">元</span>
+                            <span class="little">门市价:980元</span>
+                            <span class="sell">已售968629</span>
+                        </div>
+                    </div>
+                </li>
+        </ul>
+    </div>
+    </div>
+</body>
+
+</html>

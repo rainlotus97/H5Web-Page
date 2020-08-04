@@ -1,0 +1,12 @@
+$(function(){
+    $(".twospan").click(function(){
+        $(this).css("color","#f56600").parent().siblings().find("span").css("color","#666")
+        $(".loginarea").css("display","none");
+        $(".loginarea2").css("display","block");
+    })
+    $(".logspan").click(function(){
+        $(this).css("color","#f56600").parent().siblings().find("span").css("color","#666")
+        $(".loginarea").css("display","block");
+        $(".loginarea2").css("display","none");
+    })
+})
