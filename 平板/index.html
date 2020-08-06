@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IpadNote</title>
+    <script src="./js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1983231_xnfwrf9gcy.css">
+    <link rel="stylesheet" href="./css/ipad.css">
+    <script src="./js/jquery-3.1.1.js"></script>
+    <script src="./js/ipad.js"></script>
+
+</head>
+
+<body>
+    <div class="ipad-note">
+        <div class="contain">
+            <!-- 中央左边 -->
+            <div class="note-left">
+                <div class="nL-one">
+                    <img src="./images/组-18.png" alt="">
+                </div>
+                <div class="nL-two row">
+                    <p class="nlt">
+                        <img src="./images/user.png" alt="">
+                        &nbsp;黑侠（光谷店）
+                    </p>
+                    <p class="time">
+                        <img src="./images/time.png" alt="">
+                        2016-04-06&nbsp;&nbsp;10:23&nbsp;&nbsp;AM
+                    </p>
+                </div>
+                <div class="nL-three row">
+                    <p class="shouzhi">
+                        <img src="./images/shouzhi.png" alt="">
+                        收支明细
+                    </p>
+                </div>
+                <div class="nL-five">
+                    <div class="nL-four">
+                        <div class="nL-tabel" id="nL-table">
+                            <div class="nL-tbone nlt-first">
+                                <div class="nltbo"></div>
+                                <div class="nltbo"></div>
+                                <div class="nltbo"></div>
+                                <div class="nltbo nlt-image">
+                                    <img src="./images/搜.png" alt="" class="nlt-img">
+                                </div>
+                                <div class="nltbo"></div>
+                            </div>
+                            <div class="nL-tbone">
+                                <div class="nltbo nltbo-tag">品名</div>
+                                <div class="nltbo">蛋挞</div>
+                                <div class="nltbo">全麦面包</div>
+                                <div class="nltbo">戚风蛋糕</div>
+                                <div class="nltbo">三明治</div>
+                            </div>
+                            <div class="nL-tbone">
+                                <div class="nltbo nltbo-tag">数量</div>
+                                <div class="nltbo">5</div>
+                                <div class="nltbo">1</div>
+                                <div class="nltbo">1</div>
+                                <div class="nltbo">5</div>
+                            </div>
+                            <div class="nL-tbone">
+                                <div class="nltbo nltbo-tag">金额</div>
+                                <div class="nltbo">60</div>
+                                <div class="nltbo">10.5</div>
+                                <div class="nltbo">20</div>
+                                <div class="nltbo">60</div>
+                            </div>
+                            <div class="nL-tbone">
+                                <div class="nltbo nltbo-tag">结算价</div>
+                                <div class="nltbo">60</div>
+                                <div class="nltbo">10.5</div>
+                                <div class="nltbo">0</div>
+                                <div class="nltbo">60</div>
+                            </div>
+                            <div class="nL-tbone nlt-last">
+                                <div class="nltbo"></div>
+                                <div class="nltbo"></div>
+                                <div class="nltbo"></div>
+                                <div class="nltbo"></div>
+                                <div class="nltbo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 固定定位 -->
+                    <div id="nL-fixed">
+                        <ul>
+                            <li>
+                                <img src="./images/关闭.png" alt="">
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="iconfont icon-jia"></i>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="iconfont icon-jian"></i>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="iconfont icon-zengsongyouhuiquan"></i>
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./images/修改.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/椭圆-12.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/椭圆-12-拷贝.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nL-foot row">
+                        <div id="priceSum">
+                            <span>总额:</span>
+                            <span>¥125.5</span>
+                        </div>
+                        <div class="searchInput">
+                            <input type="text" placeholder="搜索商品" class="seiput">
+                            <div id="shadowImg">
+                                <img src="./images/Layer-6.png" alt="" class="shut">
+                            </div>
+                            <span class="spanI">
+                                <i class="iconfont icon-sousuo"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 中央右边 -->
+            <div class="note-right">
+                <div class="nR-one"></div>
+                <ul class="nR-two">
+                    <li class="active-li">戚风蛋糕</li>
+                    <li>蛋挞</li>
+                    <li>全麦面包</li>
+                    <li>戚风蛋糕</li>
+                    <li>三明治</li>
+                    <li id="li-last">
+                        <i class="iconfont icon-shangxiayidongjiantou"></i>
+                    </li>
+                </ul>
+                <div class="contain-right">
+                    <div class="cR-left"></div>
+                    <div class="cRight">
+                        <!-- 第一个 -->
+                        <div class="cr-Content cr-Cont">
+                            <div class="food-list">
+                                <div class="food-list-li">
+                                    <img src="./images/互动图标.png" alt="">
+                                    <p>0001</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li active-food">
+                                    <p>0002</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0003</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0004</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0005</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第二个 -->
+                        <div class="cr-Content cr-Cont">
+                            <div class="food-list">
+                                <div class="food-list-li">
+                                    <img src="./images/互动图标.png" alt="">
+                                    <p>0011</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li active-food">
+                                    <p>0012</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0013</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0014</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0015</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第三个 -->
+                        <div class="cr-Content cr-Cont">
+                            <div class="food-list">
+                                <div class="food-list-li">
+                                    <img src="./images/互动图标.png" alt="">
+                                    <p>0101</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li active-food">
+                                    <p>0102</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0103</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0104</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0105</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第四个 -->
+                        <div class="cr-Content cr-Cont">
+                            <div class="food-list">
+                                <div class="food-list-li">
+                                    <img src="./images/互动图标.png" alt="">
+                                    <p>0111</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li active-food">
+                                    <p>0112</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0113</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0114</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>0115</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第五个 -->
+                        <div class="cr-Content cr-Cont">
+                            <div class="food-list">
+                                <div class="food-list-li">
+                                    <img src="./images/互动图标.png" alt="">
+                                    <p>1101</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li active-food">
+                                    <p>1102</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>1103</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>1104</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>1105</p>
+                                    <span>巧克力蛋糕</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 下一页 -->
+                        <div class="cr-Content cr-Cont">
+                            <div class="food-list">
+                                <div class="food-list-li">
+                                    <img src="./images/互动图标.png" alt="">
+                                    <p>1111</p>
+                                    <span>戚风甜蛋糕</span>
+                                </div>
+                                <div class="food-list-li active-food">
+                                    <p>1112</p>
+                                    <span>戚风甜蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>1113</p>
+                                    <span>戚风甜蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>1114</p>
+                                    <span>戚风甜蛋糕</span>
+                                </div>
+                                <div class="food-list-li">
+                                    <p>1115</p>
+                                    <span>戚风甜蛋糕</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="note-foot row">
+            <p>会员信息：</p>
+            <div class="foot-accounts">
+                <ul class="fA-left">
+                    <li>
+                        <img src="./images/账户中心.png" alt="">
+                        <br> 管理台
+                    </li>
+                    <li>
+                        <img src="./images/购物卡2.png" alt="">
+                        <br>购物卡
+                    </li>
+                    <li>
+                        <img src="./images/会员.png" alt="">
+                        <br>会员
+                    </li>
+                    <li>
+                        <img src="./images/促销.png" alt="">
+                        <br>促销
+                    </li>
+                    <li>
+                        <div class="bg-icon">
+                            <i class="iconfont icon-naozhong"></i>
+                            <span>预定</span>
+                        </div>
+
+                    </li>
+                    <li>
+                        <img src="./images/交班22.png" alt="">
+                        <br>交班
+                    </li>
+                    <li>
+                        <img src="./images/挂单.png" alt="">
+                        <br>挂单
+                    </li>
+                </ul>
+                <div class="cash-register row">
+                    <i class="iconfont icon-qiandai"></i>
+                    <span>收银</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
