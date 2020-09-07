@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="list">
+            <img src="./images/01.png" alt="">
+            <img src="./images/02.png" alt="">
+            <img src="./images/03.png" alt="">
+            <img src="./images/04.png" alt="">
+            <img src="./images/05.png" alt="">
+        </div>
+        <button class="left"></button>
+        <button class="right"></button>
+        <div class="bottom">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        let index = 0;
+        let timeId = setInterval(function () {
+            index = (++index) % ($(".list img").length);
+            showHide(index);
+        }, 2000)
+        $(".right").click(function () {
+            index = (++index) % ($(".list img").length);
+            showHide(index);
+        })
+        $(".left").click(function () {
+            index--;
+            if (index < 0) {
+                index = 4
+            }
+            showHide(index);
+        })
+        $(".bottom span").click(function () {
+            $(this).addClass("active").siblings().removeClass("active")
+            index = $(this).index()
+            $(".list img").eq(index).show().siblings().hide()
+
+        })
+
+        $(".content").mouseenter(function () {
+            clearInterval(timeId)
+            timeId = null;
+        }).mouseleave(function () {
+            timeId = setInterval(function () {
+                index = (++index) % ($(".list img").length);
+                showHide(index);
+            },2000)
+        })
+
+        function showHide(index) {
+            $(".list img").eq(index).show().siblings().hide()
+            $(".bottom span").eq(index).addClass("active").siblings().removeClass("active")
+        }
+
+    })
+
+
+
+</script>
+
+</html>

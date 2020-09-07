@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+img,
+div,
+button {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f5f5f5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: none;
+}
+a,.line{
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+}
+ul{
+    list-style: none;
+}
+.main {
+    width: 100%;
+    position: relative;
+    min-width: 1200px;
+
+}
+
+.top {
+    width: 100%;
+    height: 70px;
+    background-color: #242424;
+    position: relative;
+    box-shadow: 0 2px 1px 5px #c20c0c;
+}
+
+.top-img {
+    width: 177px;
+    height: 69px;
+    background: url(../images/topbar.png);
+    position: absolute;
+    left: 6%;
+    cursor: pointer;
+}
+
+.bgcol {
+    background-position: 0 -3px;
+}
+
+.listspan {
+    width: 550px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 20%;
+}
+
+.listspan span {
+    width: 94px;
+    height: 100%;
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 70px;
+}
+.listspan span:hover{
+    background-color: #0a0a0a;
+    cursor: pointer;
+}
+
+.listspan span:nth-child(3),
+.listspan span:nth-child(4) {
+    width: 66px;
+}
+
+.listspan span:nth-child(5) {
+    width: 80px;
+}
+
+.listspan span:nth-child(6) {
+    width: 108px;
+    position: relative;
+}
+
+.hot {
+    width: 26px;
+    height: 13px;
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    background: url(../images/topbar.png);
+    background-position: -192px 0;
+}
+
+.top-author {
+    width: 320px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.top-search,
+.top-search input {
+    width: 158px;
+    height: 32px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    position: relative;
+}
+
+.top-search input {
+    text-indent: 28px;
+}
+
+.fdj {
+    width: 18px;
+    height: 16px;
+    position: absolute;
+    background: url(../images/topbar.png);
+    background-position: -8px -107px;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.author {
+    width: 90px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 32px;
+    border: 1px solid #4f4f4f;
+    color: #cccccc;
+    margin-right: 10px;
+}
+.author:hover{
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+.login {
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    color: #787878;
+    font-size: 12px;
+}
+.login:hover{
+    cursor: pointer;
+    color: #8b8b8b;
+}
+.content {
+    width: 980px;
+    /* height: 1096px; */
+    margin: 5px auto 0;
+    border: 1px solid #c2c2c2;
+    background-color: #fff;
+    border-bottom: none;
+}
+
+.con-search {
+    width: 420px;
+    height: 40px;
+    border-radius: 6px 5px 5px 6px;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    margin: 45px auto 0;
+    display: flex;
+    align-items: center;
+}
+
+.sea-input {
+    width: 85%;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    text-indent: 18px;
+    box-shadow: 0 0 3px 2px #c2c2c2 inset;
+}
+
+.con-search button {
+    width: 15%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    background-color: #f5f5f5;
+}
+.con-search button:hover{
+    background-color: #fafafa;
+}
+.con-search button i {
+    font-size: 20px;
+    color: #cccccc;
+
+}
+
+.snote {
+    color: #999;
+    font-size: 12px;
+    width: 900px;
+    height: 16px;
+    margin: 20px auto 17px;
+}
+
+em {
+    font-style: normal;
+    text-align: left;
+    font-size: inherit;
+}
+.snote em{
+    color: #c20c0c;
+}
+.song-line{
+    width: 900px;
+    height: 39px;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 247, 247);
+    cursor: pointer;
+    /* border: none; */
+}
+.song-list{
+    width: 12.5%;
+    height: 100%;
+    text-align: center;
+    line-height: 39px;
+    color: #333333;
+    font-size: 14px;
+    border-top: 1.5px solid #c7c7c7;
+    border-bottom: 1px solid #d6d6d6;
+}
+.song-list:first-child{
+    border-left: 1px solid #d6d6d6;
+}
+.song-list:last-child{
+    border-right: 1px solid #d6d6d6;
+}
+.song-list:hover{
+    border-top: 1.5px solid #c20c0c;
+}
+.active{
+    border-top: 1.5px solid #c20c0c;
+    border-left: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7;
+    border-bottom: none;
+    background-color: rgb(255, 255, 255);
+
+}
+.single-song{
+    width: 900px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+.single-song:nth-of-type(2n){
+    background-color: #f7f7f7;
+}
+.single-song:hover{
+    background-color: #f7f7f7;
+    border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
+}
+.single-song:hover .save-icon{
+    display: block;
+}
+.songs{
+    width: 900px;
+    /* height: 820px; */
+    margin: 20px auto 0;
+    font-size: 12px;
+    overflow: hidden;
+}
+.ss-left{
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+.ss-left i:first-of-type{
+    color: #cccccc;
+}
+.ss-left i:first-of-type:hover{
+    color: #191919;
+    cursor: pointer;
+}
+.ss-left i:nth-of-type(2){
+    color: #c20c0c;
+}
+.ss-left i:nth-of-type(2):hover{
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
+.song-name{
+    /* color: #0c73c2; */
+    margin: 0 5px;
+    cursor: pointer;
+}
+.save-icon{
+    position: absolute;
+    left: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.save-icon i{
+    margin: 0 2px;
+    cursor: pointer;
+    color: #999999;
+}
+.save-icon i:first-of-type{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 0px;
+}
+.save-icon i:hover{
+    color: #333333;
+}
+.save-icon i:nth-of-type(2){
+    font-size: 18px;
+}
+.save-icon i:nth-of-type(3){
+    font-size: 14px;
+    font-weight: bold;
+}
+.save-icon i:nth-of-type(4){
+    font-size: 12px;
+    margin-left: 3px;
+}
+.song-author{
+    position: absolute;
+    left: 520px;
+    cursor: pointer;
+}
+.collection{
+    position: absolute;
+    left: 630px;
+    font-size: 12px;
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+.time{
+    position: absolute;
+    right: 38px;
+}
+.footer{
+    width: 100%;
+    height: 152px;
+    border-top: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
+    position: relative;
+}
+.footmain{
+    width: 980px;
+    height: 115px;
+    margin: 0 auto;
+    position: relative;
+}
+.foot-left{
+    width: 520px;
+    height: 100%;
+}
+.line{
+    margin: 0 5px;
+}
+.line-one{
+    margin-top: 15px;
+}
+.span{
+    font-size: 12px;
+    color: #666666;
+}
+.alink{
+    color: #333333;
+}
+.span:nth-child(2){
+    margin-left: 10px;
+}
+.police-logo {
+    width: 14px;
+    height: 14px;
+    background: url(https://s2.music.126.net/style/web2/img/3rd/police.png?0cc99b7c8df75f2a02a2055f1ca58ee0) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    /* margin-right: 2px; */
+    margin-left: 5px;
+    vertical-align: -2px;
+}
+.foot-right{
+    width: 420px;
+    height: 70px;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+li.unit{
+    width: 65px;
+    height: 70px;
+    position: relative;
+    margin: 0 10px;
+}
+.logo{
+    width: 49px;
+    height: 45px;
+    background: url(../images/foot_enter_new.png);
+    position: absolute;
+    background-size: 110px 552px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logonew{
+    background-position: 49px -456.5px;
+}
+.logouser{
+    background-position: 49px -101px;
+}
+.tt{
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    font-size: 10px;
+    color: #999999;
+    text-align: center;
+}
+.unit:nth-child(1) span{
+    left: 24px;
+}
+.to-top{
+    width: 49px;
+    height: 44px;
+    background-color: #eee;
+    position: fixed;
+    left: 50%;
+    margin-left: 500px;
+    bottom: 200px;
+    border-radius: 4px; 
+    text-align: center;
+    display: none;
+    cursor: pointer;
+}
+.to-top i,.to-top p{
+    font-size: 12px;
+    color: #4f4f4f;
+}

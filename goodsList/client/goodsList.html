@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>goodsList</title>
+  <script src="./lib/vue-2.4.0.js"></script>
+  <script src="./lib/axios.min.js"></script>
+  <link rel="stylesheet" href="./lib/bootstrap-3.3.7.css">
+  <style>
+    .active {
+      background-color: red !important;
+      color: white;
+    }
+    /*整个列表进入动画*/
+    .v-enter,
+    .v-leave-to {
+      opacity: 0;
+      transform: translateX(80px);
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+      transition: all 0.2s ease;
+    }
+    .v-move {
+      /*列表排序过滤*/
+      transition: all 0.6s ease;
+    }
+    .v-leave-active{
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">添加商品</h3>
+      </div>
+      <div class="panel-body form-inline">
+
+        <label>
+          商品名称:
+          <input type="text" v-model="name" ref="nameInput" v-focus class="form-control">
+        </label>
+        <label>
+          商品价格:
+          <input type="number" class="form-control" v-model="price" @keyup.enter="add">
+        </label>
+        <input type="button" value="添加" class="btn btn-primary" @click="add">
+        <label>
+          搜索名称关键字：
+          <!-- 注意： Vue中所有的指令，在调用的时候，都以 v- 开头
+                 v-focus v-color	自动获取焦点和设置文本颜色为绿色 -->
+          <input type="text" class="form-control" v-model="keywords" id="search" v-color="'green'">
+        </label>
+        <input type="button" value="第一栏变色" class="btn btn-primary" @click="change">
+      </div>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped">
+      <thead>
+        <tr :style="getColor()">
+          <th v-for="(item,index) in thList" :class="{active:currentIndex===index}" @click="handleClick(index)">{{item}}
+          </th>
+        </tr>
+      </thead>
+      <tbody is="transition-group" appear>
+        <tr v-for="item in search()" :key="item.id">
+          <td>{{item.id}}</td>
+          <td>{{item.name|showHot}}</td>
+          <td v-fontsize="16" v-fontweight="900" v-color="'red'">{{item.price}}</td>
+          <td>
+            <a href="" @click.prevent="del(item.id)">删除</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <script>
+    //自定义指令
+    Vue.directive("focus", {
+      inserted: function (el, binding) {
+        el.focus();
+      }
+    });
+    Vue.directive("fontsize", {
+      bind(el, binding) {
+        el.style.fontSize = parseInt(binding.value) + 'px'
+      }
+    });
+    Vue.directive("fontweight", {
+      bind(el, binding) {
+        el.style.fontWeight = binding.value
+      }
+    });
+    Vue.directive("color", {
+      bind(el, binding) {
+        el.style.color = binding.value
+      }
+    }),
+
+
+      axios.defaults.baseURL = 'http://localhost:3000/';
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        list: [
+        ],
+        thList: ['商品序号', '商品名称', '商品价格', '删除商品'],
+        currentIndex: -1,
+        name: "",
+        price: "",
+        color: 'black',
+        bgcolor: 'white',
+        keywords: ''
+      },
+      created() {
+        this.getAllList()
+      },
+      methods: {
+        getAllList() { // 获取所有的商品列表 
+          axios.get('api/getgoodslist').then(({ data }) => {
+            if (data.status === 0) {
+              // 成功
+              this.list = data.message
+            }
+          })
+        },
+        // 添加商品列表到后台服务器
+        add() {
+
+          if (this.name && this.price) {
+            var obj = {
+              name: this.name,
+              price: this.price
+            }
+
+            axios.post("/api/goods/new", obj)
+              .then(({ data }) => {
+                //添加成功
+                if (data.status == 0) {
+                  this.getAllList();
+                }
+              })
+
+            this.name = this.price = ""
+            //重新让name输入框获取焦点
+            this.$refs.nameInput.focus()
+          }
+
+        },
+        // 删除商品
+        del(id) {
+          axios.get(`/api/goods/del/${id}`)
+            .then(({ data }) => {
+              if (data.status == 0) {
+                this.getAllList();
+              }
+            })
+        },
+        // 点击获取当前index,以实现一格变色
+        handleClick(index) {
+          this.currentIndex = index
+        },
+        // 点击变色
+        change() {
+          this.currentIndex = -1,
+            this.bgcolor = "rgb(" + this.rand(0, 255) + "," + this.rand(0, 255) + "," + this.rand(0, 255) + ")"
+          this.color = "rgb(" + this.rand(0, 255) + "," + this.rand(0, 255) + "," + this.rand(0, 255) + ")"
+        },
+        // 颜色随机数
+        rand(m, n) {
+          return Math.floor(Math.random() * (n - m + 1))
+        },
+        // 动态绑定style属性
+        getColor() {
+          return { backgroundColor: this.bgcolor, color: this.color }
+        },
+        search() {
+          return this.list.filter((item) => {
+            if (item.name.includes(this.keywords)) {
+              return item;
+            }
+          })
+        }
+
+      },
+      filters: {
+        showHot(name) {
+          return '爆款 ' + name
+        }
+      }
+
+    });
+  </script>
+</body>
+
+</html>
